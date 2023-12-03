@@ -2,6 +2,7 @@ package com.arincdogansener.landmarkbookkotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import com.arincdogansener.landmarkbookkotlin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         landmarkList.add(eiffel)
         landmarkList.add(londonBridge)
 
-        
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, landmarkList.map { landmark ->  landmark.name})
+
+        binding.listView.adapter = adapter
     }
 }
