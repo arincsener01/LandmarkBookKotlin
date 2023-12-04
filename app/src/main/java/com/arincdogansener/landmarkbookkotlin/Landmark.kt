@@ -1,4 +1,6 @@
 package com.arincdogansener.landmarkbookkotlin
 
-class Landmark (val name : String, val country : String, val image : Int){
+import java.io.Serializable
+//Serializable önemli
+class Landmark (val name : String, val country : String, val image : Int) : Serializable{
 }
